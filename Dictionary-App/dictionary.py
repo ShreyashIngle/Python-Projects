@@ -1,4 +1,8 @@
+
 from PyDictionary import PyDictionary
+  
+  
+dict = PyDictionary()
 
 dictionary = PyDictionary()
 

@@ -160,8 +160,8 @@ def f10():
 		wa = "https://www.brainyquote.com/quote_of_the_day"
 		res = requests.get(wa)
 		data = bs4.BeautifulSoup(res.text, 'html.parser')
-		info = data.find('img', {'class' : 'p-qotd'})
-		msg = info['alt']
+		info = data.find_all('img', {'class' : 'p-qotd'})
+		msg = info['img']
 		return msg
 message = f10()
 msg = message.strip()
